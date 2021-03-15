@@ -28,21 +28,79 @@
 				<!-- One -->
 					<section id="one">
 						<header class="major">
-							<h2>Verkefni 3<br />
+							<h2>3D prentun og 3D skönnun<br />
 							</h2>
 						</header>
-						<p>Hér að neðan er að finna nánari lýsingu á verkefni 3.
+						<p><img src="myndir/3d/forsidumynd1.png" alt="3D prentun" width="311.4" height="184.8"><img src="myndir/3d/fill1.png" alt="3D skönnun" width="384" height="216">
                         </p>
-                         <ul class="actions">
+                         <!-- <ul class="actions">
 							<li><a href="en.verkefni3.html" class="button">Click here for English</a></li>
 				        </ul>
-					</section>
+					</section> -->
                 
 				<!-- Two -->
 				    <section id="two">
-						<h2>Verkefni 3</h2>
-                        <p>...
+						<h3>Verkefnalýsing</h3>
+                        <p>Í þessu verkefni átti að hanna módel fyrir 3D prentun sem ekki væri hægt að framkvæma með frádráttar framleiðslu, einnig átti að 3D skanna einhvern hlut með photogrammetríu.
                         </p>
+                        
+                        <h3>3D prentun</h3>
+                        
+                        <h4>Undirbúningur</h4>
+                        <p>Ég byrjaði á því að finna hugmyndir til að teikna og endaði á því að hanna módel fyrir matskeið. Módelið var teiknað í Fusion 360. Áður en ég byrjaði að teikna módelið var 3D prentari valinn og hönnunarreglur/þvingarnir ákvarðaðar, þetta var hópverkefni sem ég gerði með tveimur öðrum.<a href="LINKUR">Á vefsíðu Stefáns</a> má finna nánari upplýsingar um 3D prentarann og hönnunarreglurnar.
+                        </p>
+                        
+                        <h4>Tölvuteikning</h4>
+                        <p>Ég byrjaði á því að teikna skeiðina sjálfa og til einföldunar ákvað ég að skeiðin yrði hálf kúla. Þar sem ein matskeið er 15ml þá reiknaði ég að þvermálið þyrfti að vera 38,56mm. Hér að neðan má sjá útreikninga fyrir þvermálið. Þar sem 1ml =  1000mm^3 þá setti ég V = 30000.
+                        <br /><br />
+                        <img src="myndir/3d/reikna.png" alt="Þvermál kúlu reiknað"><br /><br />
+                        <img src="myndir/3d/2DSketch.png" alt="Teikning" width="688" height="381.6"><br /><br />
+                        Þar sem kúlan var gegnheil þá fór ég í „Modify“ og svo „Shell“ til að „skafa“ úr kúlunni. Ég passaði auðvitað að velja „Direction: Outside“ til að taka ekki af rúmmáli hálfkúlunnar. Síðan var skaftið útbúið og það fest saman við kúluna með „Extrude“ og „Operation: Join“. <br /><br />
+                        Því næst var allt fínpússað með „Fillet“ og gat sett á skaftið með þvermálið 5mm. Síðasta skrefið var að setja textann „1 matskeið“ á skaftið og „extrude'a“ niður um 1mm.<br /><br />
+                        <img src="myndir/3d/3dsketch.png" alt="3D teikningin" width="688" height="381.6"><br /><br />Hér að neðan má sjá stutt myndband af því hvernig módelið varð til.<br /><br /><video width="735" height="360" controls>
+                        <source src="myndir/3d/matskeid.mp4" type="video/mp4"></video><br /><br />
+                        </p>
+                        
+                        <h4>Cura</h4>
+                        <p>Næsta skref var að færa stl skrá af módelinu yfir í <i>Cura</i>. Þar inni lagaði ég nokkrar stillingar áður en módelið mátti fara í prentun. Ég horfði á <a href="https://www.youtube.com/watch?v=L-hvXZgH76o&ab_channel=Technivorous3dprinting">myndband um Cura</a> og hvaða stillingar er mælt með að gera. Helstu stillingar sem ég gerði voru eftirfarandi:<br />- Infill Density: 20%<br />- Profile: Fine (0.15mm)<br />- Support: 70° Everywhere<br />- Build Plate Adhesion: Raft<br /><br />Ástæðan fyrir því að módelið liggur ekki niður er sú að þá væri erfiðara fyrir prentarann að ná textanum sem er á skaftinu.<br /><br />
+                        <img src="myndir/3d/cura1.png" alt="Módelið látið snúa upp" width="688" height="268.8"><br /><br />Skv. Cura er módelið 7g, og 12g með öllu „support“ efninu. Hér að neðan er myndband sem sýnir þéttleika efnisins inni í módelinu og prentunarferlið.<br /><br /><video width="735" height="360" controls>
+                        <source src="myndir/3d/CuraSlicer.mp4" type="video/mp4"></video><br /><br />
+                        </p>
+                        
+                        <h4>3D prentun</h4>
+                        <p>Þá næst færði ég skránna yfir í 3D prentarann <i>Original Prusa i3 MK3</i> með SD korti og valdi módelið mitt.<br /><br />
+                        <img src="myndir/3d/print1.png" alt="Módelið farið í prentun" width="756" height="1008"><br /><br />Þetta var ekki stór hlutur svo það tók prentarann aðeins um tvo tíma að prenta hann út. Hér að neðan má sjá útkomuna beint eftir prentun.<br /><br /><img src="myndir/3d/tilbuidMedSupporti.png" alt="Tilbúið 3D módel" width="725.76" height="544.32"><br /><br />Næst var að brjóta „support-ið“ frá módelinu og byrja nota skeiðina!<br /><br />
+                        <img src="myndir/3d/skeidINotkun.png" alt="Matskeið tilbúin til notkunar" width="756" height="1008">
+                        </p>
+                        
+                        <h4>Niðurstöður</h4>
+                        <p>Matskeiðin kom nokkuð vel út, fyrir utan hvað gekk brösulega að brjóta „support-ið“ af svo bakhliðin er mjög gróf.<br /><br /><img src="myndir/3d/skeidBakhlid.png" alt="Bkahlið" width="725.76" height="544.32"><br /><br /> Ég mældi þvermálið á litla gatinu á skaftinu og það passar við þvermálið í teikingunni.
+                        </p>
+                        
+                        <h4>Tímaskráning</h4>
+                        <p>- 1 klst: Finna hugmyndir<br />- 2 klst: Reikna rúmmál kúlu og teikna módelið í Fusion 360<br />- 1 klst: Læra á Cura og skoða stillingar<br />- 1/2 klst: Setja módelið í Cura og undirbúa fyrir 3D prentun<br />- 2 klst: Bíða eftir prentun<br />- 4 klst: Uppfæra vefsíðu<br /><b>- Heildartími: <u>10,5 klst</u></b>
+                        </p>
+                        
+                        <h3>3D skönnun</h3>
+                        
+                        <h4>Undirbúningur</h4>
+                        <p>Ég byrjaði á því að finna humgnydir til að skanna að heiman. Ég las á vefsíðu hjá gömlum nemanda að fyrir 3D skönnun væri best að nota „detail“ mikla hluti. Ég endaði á því að velja fílinn sem ég keypti á útimarkaði í Mallorca árið 2016.<br /><br /><img src="myndir/3d/fill3.png" alt="Fíll" width="756" height="1008"><br /><br />
+                        Ég ákvað að nota hugbúnaðinn <a href="https://www.qlone.pro/">Qlone</a> fyrir þetta verkefni og náði í appið þeirra í símann minn.<br /><br /><img src="myndir/3d/qloneApp.png" alt="Qlone app" width="621" height="605"><br /><br />Ég prentaði út bakgrunnsmottu sem er notaður fyrir skönnunina, en mottuna má finna á vefsíðu <a href="https://www.qlone.pro/">Qlone.</a><br /><br /><img src="myndir/3d/fillOgBakgrunnur.png" alt="Bakgrunnur" width="756" height="1008"><br /><br />
+                        </p>
+                        
+                        <h4>3D skönnun</h4>
+                        <p>Því næst opnaði ég appið og byrjaði að skanna allan hringinn í kringum fílinn. Á skjánum er auðveldlega hægt að sjá hvaða hliðar eru eftir. Þegar allar hliðar eru búnar hættir appið að skanna og byrjar að setja myndirnar saman. Hér að neðan má sjá gif af lokaútkomunni.
+                        <br /><br /><img src="myndir/3d/lokautkomaFill.gif" alt="Gif af lokaútkomunni" ><br />
+                        </p>
+                        
+                        <h4>Niðurstöður</h4>
+                        <p>Skönnunin fannst mér koma mjög vel út, betur en ég átti von á. Það eina sem vantaði til að þetta yrði nær fullkomið, var gatið á milli þar sem raninn brettist upp á. Ég prófaði að skanna fílinn tvisvar í viðbót til að athuga hvort þetta myndi lagast en það gerði það ekki og kom þetta eins út. 3D skannarinn náði þó öllum helstu smáatriðum fílsins, og meira segja „Mallorca“ límmiðanum, sem mér þótti mjög skemmtilegt að sjá.
+                        </p>
+                        
+                        <h4>Tímaskráning</h4>
+                        <p>- 1 klst: Ákveða hlut til að skanna, prenta út bakgrunnsmottuna og sækja Qlone appið<br />- 1 klst: Skanna hlutinn (þrjár tilraunir)<br />- 1 klst: Uppfæra vefsíðu<br /><b>- Heildartími: <u>3 klst</u></b>
+                        </p>
+                        
 						<ul class="actions">
 							<li><a href="#" class="button">Aftur upp</a></li>
 						</ul>
